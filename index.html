@@ -2,21 +2,190 @@
 <html lang="en" >
 <head>
     <meta charset="UTF-8">
-    <title>Devis</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <script type="text/javascript" src="/JS/index.js" defer></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EURLthibault, maitre d'oeuvre ">
+    <meta name="keywords" content="maitre d'oeuvre pour tout ouvrage, rénovation, construction, aménagement extérieur">
+    <meta name="author" content="EC-Craft">
+    <title>EURLthibault - Maitre d'Oeuvre</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="JS/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/gif" href="" alt="Logo EURLthibault"/>
 </head>
 
 <body>
     <header>
-
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>EURLthibault</h1>
+                <span class="tagline">Maître d'Œuvre</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#top">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
     </header>
 
+    <section id="top" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue chez EURLthibault</h1>
+            <h2>« Donnez-moi les clés, le projet sera fait, avec le budget que vous aurez »</h2>
+            <p>Votre maître d'œuvre pour tous vos projets de construction, rénovation et aménagement extérieur.</p>
+            <a href="#contact" class="cta-button">Demander un devis</a>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
 
-    
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Nos Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🏗️</div>
+                    <h3>Construction Neuve</h3>
+                    <p>Réalisation complète de votre projet de construction, de la conception à la livraison clé en main.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🔨</div>
+                    <h3>Rénovation</h3>
+                    <p>Transformation et modernisation de vos espaces existants avec un souci du détail et de la qualité.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Aménagement Extérieur</h3>
+                    <p>Création et aménagement de vos espaces extérieurs : terrasses, jardins, allées et dépendances.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <h3>Maîtrise d'Œuvre</h3>
+                    <p>Coordination complète de votre projet : suivi, planning, budget et relation avec les artisans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Nos Réalisations</h2>
+            <p class="section-intro">Découvrez nos réalisations récentes en matière de construction et de rénovation.</p>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>Villa Contemporaine</h3>
+                        <p>Construction d'une villa moderne de 180m² avec piscine et aménagement paysager.</p>
+                        <span class="project-type">Construction Neuve</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>Rénovation Maison de Maître</h3>
+                        <p>Rénovation complète d'une maison de caractère du 19ème siècle, alliant charme et modernité.</p>
+                        <span class="project-type">Rénovation</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <div class="project-info">
+                        <h3>Extension Moderne</h3>
+                        <p>Extension et réaménagement d'une maison familiale avec création d'un espace ouvert.</p>
+                        <span class="project-type">Extension</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p class="section-intro">Vous avez un projet ? Partagez-nous vos idées et obtenez un devis personnalisé.</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>EURLthibault</h3>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <p>Votre région, France</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <p>+33 X XX XX XX XX</p>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <p>contact@eurlthibault.fr</p>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">Prénom *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Nom *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="photo">Photo du projet</label>
+                            <input type="file" id="photo" name="photo" accept="image/*" multiple>
+                            <small>Formats acceptés : JPG, PNG, PDF (max 10MB)</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Budget estimé</label>
+                            <select id="budget" name="budget">
+                                <option value="">Sélectionnez votre budget</option>
+                                <option value="moins-50k">Moins de 50 000€</option>
+                                <option value="50k-100k">50 000€ - 100 000€</option>
+                                <option value="100k-200k">100 000€ - 200 000€</option>
+                                <option value="200k-plus">Plus de 200 000€</option>
+                                <option value="a-definir">À définir ensemble</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Décrivez votre projet, vos idées *</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Parlez-nous de votre projet : type de travaux, délais souhaités, contraintes particulières, vos idées..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Envoyer ma demande</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
 
     <footer>
+        <p>© EURLthibault</p>
+        <small> © 2025 Tous droits réservés - creer par EC-CRAFT</small>
 
     </footer>
 </body>
