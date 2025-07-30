@@ -14,8 +14,8 @@
     --shadow: rgba(0, 0, 0, 0.1);
     --shadow-heavy: rgba(0, 0, 0, 0.3);
     
-    --font-primary: 'Playfair Display', serif;
-    --font-secondary: 'Inter', sans-serif;
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Open Sans', sans-serif;
 }
 
 * {
@@ -236,11 +236,49 @@ section h2 {
     background: var(--gray-light);
 }
 
+/* Service principal en haut */
+.main-service {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.main-service-card {
+    max-width: 500px;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    color: var(--primary-black);
+    transform: scale(1.05);
+    border: 3px solid var(--gold-dark);
+}
+
+.main-service-card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 20px 50px var(--shadow-heavy);
+}
+
+.main-service-card .service-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-service-card h3 {
+    font-size: 1.6rem;
+    color: var(--primary-black);
+    font-weight: 700;
+}
+
+.main-service-card p {
+    color: var(--primary-black);
+    font-weight: 500;
+    line-height: 1.8;
+}
+
+/* Grille des services complémentaires */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 0;
 }
 
 .service-card {
@@ -275,6 +313,7 @@ section h2 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
     color: var(--primary-black);
+    font-weight: 600;
 }
 
 .service-card p {
@@ -527,6 +566,15 @@ footer small {
     
     .hero-content h2 {
         font-size: 1.2rem;
+    }
+    
+    .main-service-card {
+        transform: scale(1);
+        margin: 0 1rem;
+    }
+    
+    .main-service-card:hover {
+        transform: scale(1.02);
     }
     
     .services-grid {
