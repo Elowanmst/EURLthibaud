@@ -1,6 +1,4 @@
-/* ================================
-   VARIABLES & RESET
-   ================================ */
+
 :root {
     --primary-black: #1a1a1a;
     --secondary-black: #2d2d2d;
@@ -41,9 +39,7 @@ body {
     padding: 0 20px;
 }
 
-/* ================================
-   HEADER & NAVIGATION
-   ================================ */
+
 header {
     position: fixed;
     top: 0;
@@ -127,9 +123,7 @@ header {
     transition: 0.3s;
 }
 
-/* ================================
-   HERO SECTION
-   ================================ */
+
 .hero {
     height: 100vh;
     background: linear-gradient(135deg, var(--primary-black) 0%, var(--secondary-black) 100%);
@@ -204,9 +198,7 @@ header {
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
 }
 
-/* ================================
-   SECTIONS GÉNÉRALES
-   ================================ */
+
 section {
     padding: 5rem 0;
 }
@@ -229,14 +221,13 @@ section h2 {
     margin-right: auto;
 }
 
-/* ================================
-   SERVICES SECTION
-   ================================ */
+
 .services {
     background: var(--gray-light);
+    padding-top: 12rem; /* Augmenté pour que le titre h2 passe aussi au-dessus */
 }
 
-/* Service principal en haut */
+
 .main-service {
     display: flex;
     justify-content: center;
@@ -273,12 +264,83 @@ section h2 {
     line-height: 1.8;
 }
 
-/* Grille des services complémentaires */
+/* Grille des services */
 .services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+/* Service principal (Maîtrise d'œuvre) - en haut, centré */
+.main-service {
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--pure-white);
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 30px var(--shadow-heavy);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-service .service-icon {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    filter: none;
+    order: 1;
+}
+
+.main-service h3 {
+    font-family: var(--font-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--pure-white);
+    font-weight: 600;
+    order: 2;
+}
+
+.main-service p {
+    color: var(--pure-white);
+    line-height: 1.7;
+    order: 3;
+}
+
+.main-service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px var(--shadow-heavy);
+}
+
+/* Services secondaires - avec séparation visuelle */
+.secondary-services {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
-    margin-top: 0;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--gold);
+    position: relative;
+}
+
+.secondary-services::before {
+    content: "Services proposés";
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--gray-light);
+    color: var(--gold);
+    padding: 0 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .service-card {
@@ -408,7 +470,7 @@ section h2 {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 3fr;
     gap: 4rem;
     margin-top: 3rem;
     align-items: start;
@@ -578,7 +640,27 @@ footer small {
     }
     
     .services-grid {
+        gap: 2rem;
+    }
+    
+    .main-service {
+        max-width: none;
+        padding: 2rem 1.5rem;
+    }
+    
+    .main-service .service-icon {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .main-service h3 {
+        font-size: 1.6rem;
+    }
+    
+    .secondary-services {
         grid-template-columns: 1fr;
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
     }
     
     .projects-grid {
@@ -591,8 +673,15 @@ footer small {
     }
     
     .form-row {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+    }
+    
+    /* Pour les très petits écrans seulement, empiler les champs sauf nom/prénom */
+    @media (max-width: 480px) {
+        .form-row:not(:first-of-type) {
+            grid-template-columns: 1fr;
+        }
     }
     
     .navbar {
@@ -601,6 +690,10 @@ footer small {
     
     section {
         padding: 3rem 0;
+    }
+    
+    .services {
+        padding-top: 9rem; /* Padding augmenté pour mobile aussi */
     }
     
     .container {

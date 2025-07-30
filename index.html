@@ -9,7 +9,6 @@
     <title>EURLthibault - Maitre d'Oeuvre</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="JS/index.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/gif" href="" alt="Logo EURLthibault"/>
 </head>
 
@@ -47,32 +46,28 @@
     <section id="services" class="services">
         <div class="container">
             <h2>Nos Services</h2>
-            
-            <!-- Service principal en haut -->
-            <div class="main-service">
-                <div class="service-card main-service-card">
+            <div class="services-grid">
+                <div class="service-card main-service">
                     <div class="service-icon">📋</div>
                     <h3>Maîtrise d'Œuvre</h3>
                     <p>Notre métier principal : coordination complète de votre projet, suivi du planning, gestion du budget et relation avec tous les artisans pour une réalisation parfaite.</p>
                 </div>
-            </div>
-            
-            <!-- Services complémentaires en dessous -->
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔨</div>
-                    <h3>Rénovation</h3>
-                    <p>Transformation et modernisation de vos espaces existants avec un souci du détail et de la qualité.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">�️</div>
-                    <h3>Construction Neuve</h3>
-                    <p>Réalisation complète de votre projet de construction, de la conception à la livraison clé en main.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Aménagement Extérieur</h3>
-                    <p>Création et aménagement de vos espaces extérieurs : terrasses, jardins, allées et dépendances.</p>
+                <div class="secondary-services">
+                    <div class="service-card">
+                        <div class="service-icon">🔨</div>
+                        <h3>Rénovation</h3>
+                        <p>Transformation et modernisation de vos espaces existants avec un souci du détail et de la qualité.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🏗️</div>
+                        <h3>Construction Neuve</h3>
+                        <p>Réalisation complète de votre projet de construction, de la conception à la livraison clé en main.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🌿</div>
+                        <h3>Aménagement Extérieur</h3>
+                        <p>Création et aménagement de vos espaces extérieurs : terrasses, jardins, allées et dépendances.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -162,11 +157,11 @@
                             <input type="file" id="photo" name="photo" accept="image/*" multiple>
                             <small>Formats acceptés : JPG, PNG, PDF (max 10MB)</small>
                         </div>
-                        <div class="form-group">
-                            <label for="budget">Budget estimé (€)</label>
-                            <input type="number" id="budget" name="budget" placeholder="Ex: 150000" min="0" step="1000">
-                            <small>Montant estimé en euros</small>
-                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="budget">Budget estimé (€)</label>
+                        <input type="number" id="budget" name="budget" placeholder="Ex: 150000" min="0" step="1000">
                     </div>
 
                     <div class="form-group">
